@@ -7,11 +7,13 @@ import java.util.Comparator;
 import java.util.List;
 
 public class PolynomialLongDivision {
+    //  статичний метод, що виводить результат ділення без пояснень (тільки обчислення та перевірка)
     public static void DivideClear(Polynomial p1, Polynomial p2){
         Polynomial[] result = p1.divide(p2);
         System.out.printf("Обчислення: (%s) / (%s) = %s остача %s%n", p1, p2, result[0], result[1]);
         System.out.printf("Перевірка: (%s) * (%s) + (%s) = %s%n%n", result[0], p2, result[1], result[0].multiply(p2).add(result[1]));
     }
+    //  статичний метод, що виводить результат ділення з поясненнями (і до того ж ще обчислення з перевіркою)
     public static void DivideWithExplanation(Polynomial p1, Polynomial p2){
         String tab = " ";
         String line = "—";

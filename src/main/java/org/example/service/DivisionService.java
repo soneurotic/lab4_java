@@ -15,6 +15,8 @@ public class DivisionService {
         this.divisionResultWriter = new DivisionResultWriter(jsonObject, input, reader);
     }
 
+    //  метод, що отримує результат ділення многочлена на многочлен (результат складається з двох значень: многочлен, що утворений
+    //  в результаті ділення + остача), який потім використовується для запису у JSON-файл
     public PolynomialLongDivision.Polynomial[] getResult(PolynomialLongDivision.Polynomial p1, PolynomialLongDivision.Polynomial divider){
         PolynomialLongDivision.Polynomial[] result = p1.divide(divider);
         return result;
