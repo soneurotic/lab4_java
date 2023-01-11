@@ -32,6 +32,9 @@ public class Controller {
             polynomial.add(coefficient);
             System.out.print("Степінь.: ");
             long exponent = scanner.nextInt();
+            if(exponent == 404){
+                break;
+            }
             polynomial.add(exponent);
         }
         System.out.println("Формат - коефіцієнт, степінь, коефіцієнт, степінь, (і так далі попарно) . . .");
@@ -46,6 +49,9 @@ public class Controller {
             divider.add(coefficient);
             System.out.print("Степінь.: ");
             long exponent = scanner.nextInt();
+            if(exponent == 404){
+                break;
+            }
             divider.add(exponent);
         }
 
